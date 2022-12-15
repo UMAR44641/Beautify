@@ -3,15 +3,16 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
-  Button
+  Button,
+  Text
 } from '@chakra-ui/react';
 import axios from "axios";
 import {ChevronDownIcon} from "@chakra-ui/icons"
 import { useEffect, useState } from 'react';
-import Productcard from '../components/Productcard';
-import Skeleton from '../components/Skeleton';
 import Productlist from '../components/Productlist';
-const style={color:"white",backgroundColor:"gray",borderRadius:"0px"};
+import Footer from '../components/Footer';
+// import ControlledCarousel from '../components/Carousel';
+const style={borderRadius:"0px"};
 export default function Home() {
   const [homedata,sethomedata]=useState([]);
   const [loading,setloading]=useState(false);
@@ -33,7 +34,7 @@ export default function Home() {
     <>
       <hr style={{border:"1px solid black"}} />
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />}  style={style} marginLeft="80px">
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />}  style={style} _hover={{backgroundColor:"black",color:"white"}}  marginLeft="80px">
        Brands
       </MenuButton>
      <MenuList>
@@ -45,7 +46,7 @@ export default function Home() {
       </MenuList>
      </Menu>
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={style}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style= {style} _hover={{backgroundColor:"black",color:"white"}} >
        Holiday Gifts
       </MenuButton>
      <MenuList>
@@ -59,7 +60,7 @@ export default function Home() {
       </MenuList>
      </Menu>
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={style}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style= {style} _hover={{backgroundColor:"black",color:"white"}} >
        Skincare
       </MenuButton>
      <MenuList>
@@ -71,7 +72,7 @@ export default function Home() {
       </MenuList>
      </Menu>
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={style}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style= {style} _hover={{backgroundColor:"black",color:"white"}} >
        Hair
       </MenuButton>
      <MenuList>
@@ -85,7 +86,7 @@ export default function Home() {
       </MenuList>
      </Menu>
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={style}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style= {style} _hover={{backgroundColor:"black",color:"white"}} >
        Makeup
       </MenuButton>
      <MenuList>
@@ -97,7 +98,7 @@ export default function Home() {
       </MenuList>
      </Menu>
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={style}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style= {style} _hover={{backgroundColor:"black",color:"white"}} >
        Body
       </MenuButton>
      <MenuList>
@@ -109,7 +110,7 @@ export default function Home() {
       </MenuList>
      </Menu>
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={style}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style= {style} _hover={{backgroundColor:"black",color:"white"}} >
        Fragrance
       </MenuButton>
      <MenuList>
@@ -126,7 +127,7 @@ export default function Home() {
       </MenuList>
      </Menu>
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={style}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style= {style} _hover={{backgroundColor:"black",color:"white"}} >
        Tools
       </MenuButton>
      <MenuList>
@@ -138,7 +139,7 @@ export default function Home() {
       </MenuList>
      </Menu>
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={style}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style= {style} _hover={{backgroundColor:"black",color:"white"}} >
        Self-care
       </MenuButton>
      <MenuList>
@@ -152,7 +153,7 @@ export default function Home() {
       </MenuList>
      </Menu>
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={style}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style= {style} _hover={{backgroundColor:"black",color:"white"}} >
        Trending
       </MenuButton>
      <MenuList>
@@ -164,7 +165,7 @@ export default function Home() {
       </MenuList>
      </Menu>
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={style}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style= {style} _hover={{backgroundColor:"black",color:"white"}} >
        Blog
       </MenuButton>
      <MenuList>
@@ -176,7 +177,7 @@ export default function Home() {
       </MenuList>
      </Menu>
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={style}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style= {style} _hover={{backgroundColor:"black",color:"white"}} >
        Routine
       </MenuButton>
      <MenuList>
@@ -190,7 +191,7 @@ export default function Home() {
       </MenuList>
      </Menu>
      <Menu>
-      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style={style}>
+      <MenuButton as={Button} rightIcon={<ChevronDownIcon />} style= {style} _hover={{backgroundColor:"black",color:"white"}} >
        New
       </MenuButton>
      <MenuList>
@@ -205,10 +206,11 @@ export default function Home() {
       <MenuItem>treatments</MenuItem>
       </MenuList>
      </Menu>
-     {/* {loading?<Skeleton />:homedata&&homedata.map((item)=>(
-      <Productcard key={item.id} data={{...item}} />
-     ))} */}
-     <Productlist homedata={homedata} loading={loading} />
+     <Text fontSize='xl' fontWeight='bold' backgroundColor="black" color="white" paddingLeft="200px" marginTop="20px" _hover={{backgroundColor:"white",color:"black"}}>
+     25% off with code REPLAY + free PCA SKIN Rejuvenate and Hydrate Duo (worth $33.50) @ $130+ | SHOP NOW >
+        </Text>
+     <Productlist data={homedata} loading={loading} innertext="SHOP NOW" />
+     <Footer />
     </>
 
     )
