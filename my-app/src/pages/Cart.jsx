@@ -22,7 +22,7 @@ export default function Cart(){
   }
       return (
         <>
-        <HStack><Heading marginLeft={'100px'} marginRight={"800px"} >Your Cart</Heading><Heading fontSize={"25px"} fontWeight={"normal"}>cart SubTotal:-</Heading><Text fontWeight={"bold"} fontSize='25px' >${cartdata.reduce((acc, item) => {
+        <HStack><Heading marginLeft={'100px'} marginRight={"800px"} >Your Cart</Heading><Heading fontSize={"25px"} fontWeight={"light"}>cart SubTotal:-</Heading><Text fontWeight={"bold"} fontSize >${cartdata.reduce((acc, item) => {
         return (acc += item.quantity * item.price);
       }, 0)}</Text></HStack>
         <TableContainer>
@@ -62,6 +62,18 @@ export default function Cart(){
       ))}
       </Tbody>
       </Table>
+</TableContainer>
+        <TableContainer>
+            <Table size='sm' marginLeft={"800px"} width="700px">
+         <Thead>
+         <Tr>
+        <Th width="50px" color="black">cart SubTotal</Th>
+        <Th fontSize={'25px'} color="black">${cartdata.reduce((acc, item) => {
+        return (acc += item.quantity * item.price);
+      }, 0)}</Th>
+      </Tr>
+    </Thead>
+  </Table>
 </TableContainer>
         </>
       )
