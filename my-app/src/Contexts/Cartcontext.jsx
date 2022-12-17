@@ -7,7 +7,7 @@ export default function Cartcontextprovider({ children }) {
     setcartdata([...cartdata,obj])
   };
   return (
-    <Cartcontext.Provider value={{ cartdata, handlecart }}>
+    <Cartcontext.Provider value={{ cartdata, handlecart,setcartdata }}>
       {children}
     </Cartcontext.Provider>
   );
