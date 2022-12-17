@@ -10,14 +10,15 @@ import {
     SimpleGrid,
     useColorModeValue
   } from '@chakra-ui/react';
-import axios from 'axios';
 import { useContext } from 'react';
   import { MdLocalShipping } from 'react-icons/md';
   import { Cartcontext } from '../Contexts/Cartcontext';
-  export default function Productdetails({image_link,name,price,brand,id}) {
+  export default function Productdetails({image_link,name,price,brand,id,onClose}) {
     const {cartdata,handlecart}=useContext(Cartcontext);
     const addtocart=(name,brand,price,id,image_link)=>{
-        const obj={name,brand,price,id,image_link};
+        const obj={name,brand,price,id,image_link,quantity:1};
+        // alert("Item Added")
+        onClose();
         var flag=false;
         cartdata&&cartdata.forEach((e)=>{
             if(e.id===id){
@@ -71,7 +72,7 @@ import { useContext } from 'react';
               </Text>
             </Box>
             <Button
-              onClick={()=>addtocart(name,brand,price,id,image_link)}
+              onClick={()=>(addtocart(name,brand,price,id,image_link))}
               rounded={'none'}
               w={'full'}
               mt={8}

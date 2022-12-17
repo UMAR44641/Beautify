@@ -14,12 +14,12 @@ import {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
       <>
-        <Button width={width} onClick={onOpen}>{innertext}</Button>
+        <Button width={width} onClick={onOpen} _hover={{bg:"black",color:"white"}}>{innertext}</Button>
   
         <Modal isOpen={isOpen} onClose={onClose} marginTop="100px">
           <ModalOverlay />
           <ModalContent  height="450px">
-            <Productdetails  name={name} image_link={image_link} brand={brand} price={price} id={id} />
+            <Productdetails  name={name} image_link={image_link} brand={brand} price={price} id={id} onClose={onClose} />
           </ModalContent>
         </Modal>
       </>
