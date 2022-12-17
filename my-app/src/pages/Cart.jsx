@@ -63,18 +63,6 @@ export default function Cart(){
       </Tbody>
       </Table>
 </TableContainer>
-        <TableContainer>
-            <Table size='sm' marginLeft={"800px"} width="700px">
-         <Thead>
-         <Tr>
-        <Th width="50px" color="black">cart SubTotal</Th>
-        <Th fontSize={'25px'} color="black">${cartdata.reduce((acc, item) => {
-        return (acc += item.quantity * item.price);
-      }, 0)}</Th>
-      </Tr>
-    </Thead>
-  </Table>
-</TableContainer>
         </>
       )
 }
