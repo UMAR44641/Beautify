@@ -11,6 +11,7 @@ import { SimpleGrid,Box,
     Image,
   Button,Table,Th,Thead,Tr,TableContainer,Td,Tbody,
 HStack } from "@chakra-ui/react";
+import Emptycart from "./Emptycart";
 export default function Cart(){
   const {cartdata,setcartdata}=useContext(Cartcontext);
   console.log(cartdata);
@@ -20,7 +21,8 @@ export default function Cart(){
   );
   setcartdata(updatedData);
   }
-      return (
+      return cartdata.length>0? (
+       
         <>
         <HStack><Heading marginLeft={'100px'} marginRight={"800px"} >Your Cart</Heading><Heading fontSize={"25px"} fontWeight={"light"}>cart SubTotal:-</Heading><Text fontWeight={"bold"} fontSize >${cartdata.reduce((acc, item) => {
         return (acc += item.quantity * item.price);
@@ -64,5 +66,6 @@ export default function Cart(){
       </Table>
 </TableContainer>
         </>
-      )
+      ): (<Emptycart />)
+      
 }
