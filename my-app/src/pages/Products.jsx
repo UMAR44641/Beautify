@@ -27,7 +27,7 @@ export default function Products(){
   console.log(data)
     useEffect(()=>{
         setloading(true);
-        axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json`,{
+        axios.get(`https://makeup-api.herokuapp.com/api/v1/products.json`,{
           params:{
             product_type:inputvalue,
             brand:brand,

@@ -11,6 +11,7 @@ import {ChevronDownIcon} from "@chakra-ui/icons"
 import { useEffect, useState } from 'react';
 import Productlist from '../components/Productlist';
 import Footer from '../components/Footer';
+import ControlledCarousel from '../components/Carousel';
 // import ControlledCarousel from '../components/Carousel';
 const style={borderRadius:"0px"};
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
   const [loading,setloading]=useState(false);
   useEffect(()=>{
     setloading(true);
-    axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json`,{
+    axios.get(`https://makeup-api.herokuapp.com/api/v1/products.json`,{
       params:{
         limit:10,
         price_greater_than:30
@@ -206,6 +207,7 @@ export default function Home() {
       <MenuItem>treatments</MenuItem>
       </MenuList>
      </Menu>
+     {/* <ControlledCarousel /> */}
      <Text fontSize='xl' fontWeight='bold' backgroundColor="black" color="white" paddingLeft="200px" marginTop="20px" _hover={{backgroundColor:"white",color:"black"}}>
      25% off with code REPLAY + free PCA SKIN Rejuvenate and Hydrate Duo (worth $33.50) @ $130+ | SHOP NOW >
         </Text>
