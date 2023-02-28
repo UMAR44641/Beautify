@@ -11,3 +11,7 @@ React | chakra-UI | Redux | JavaScript
 <h1>Signup</h1>
 
 <image src="https://user-images.githubusercontent.com/112633484/221770418-341e4631-d2e9-4938-be5a-06950b0029fc.png"></image>
+
+<h1>Cart-page</h1>
+<image src="![Screenshot (90)](https://user-images.githubusercontent.com/112633484/221771248-d7635633-9c2b-49b2-966f-05ceece70e3e.png)
+"></image>
