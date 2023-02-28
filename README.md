@@ -1,6 +1,6 @@
 # Beautify
-It is a clone of  a website called skinstore, which sells skincare products or women all over the world. It is an individual project completed in a span of 5 days.
-<h2>project name:- Beautify.com</h2>
+<h2>It is an E-commercee websit, which sells skincare products for women all over the world. It is an individual project completed in a span of 5 days.</h2>
+<h1>project name:- Beautify.com</h1>
 <h3>Tech stacks</h3>
 React | chakra-UI | Redux | JavaScript
 
