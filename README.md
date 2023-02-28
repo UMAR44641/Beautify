@@ -5,4 +5,4 @@ It is a clone of  a website called skinstore, which sells skincare products or w
 React | chakra-UI | Redux | JavaScript
 
 <h2>Home-page</h2>
-![Screenshot (88)](https://user-images.githubusercontent.com/112633484/221769706-27a067b8-555b-4766-a05c-2565e5be1ef3.png)
+https://user-images.githubusercontent.com/112633484/221769706-27a067b8-555b-4766-a05c-2565e5be1ef3.png
