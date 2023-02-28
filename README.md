@@ -10,5 +10,5 @@ React | chakra-UI | Redux | JavaScript
 
 <h1>Signup</h1>
 
-<image src="https://user-images.githubusercontent.com/112633484/221770418-341e4631-d2e9-4938-be5a-06950b0029fc.png
+<image src="https://user-images.githubusercontent.com/112633484/221770418-341e4631-d2e9-4938-be5a-06950b0029fc.png"
 "></image>
